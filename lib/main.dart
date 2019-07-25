@@ -1,3 +1,8 @@
+//  main.dart
+//  Flutter Login App
+//  Created by Rishabh Dev on 7/24/19.
+//  Copyright © 2019 Rishabh Dev. All rights reserved.
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -27,7 +32,7 @@ class LoginPageState extends State<LoginPage>
   void initState() {
     super.initState();
     _iconAnimationController = new AnimationController(
-        vsync: this, duration: new Duration(milliseconds: 500));
+        vsync: this, duration: new Duration(milliseconds: 700));
     _iconAnimation = new CurvedAnimation(
       parent: _iconAnimationController,
       curve: Curves.bounceOut,
@@ -52,8 +57,8 @@ class LoginPageState extends State<LoginPage>
               brightness: Brightness.dark,
               inputDecorationTheme: new InputDecorationTheme(
                 // hintStyle: new TextStyle(color: Colors.blue, fontSize: 20.0),
-                labelStyle:
-                    new TextStyle(color: Colors.lightBlueAccent, fontSize: 25.0),
+                labelStyle: new TextStyle(
+                    color: Colors.lightBlueAccent, fontSize: 25.0),
               )),
           isMaterialAppTheme: true,
           child: new Column(
@@ -71,7 +76,8 @@ class LoginPageState extends State<LoginPage>
                     children: <Widget>[
                       new TextFormField(
                         decoration: new InputDecoration(
-                            labelText: "Enter Email", fillColor: Colors.white),
+                            labelText: "Enter Email",
+                            fillColor: Colors.lightBlueAccent),
                         keyboardType: TextInputType.emailAddress,
                       ),
                       new TextFormField(
@@ -89,7 +95,7 @@ class LoginPageState extends State<LoginPage>
                         minWidth: 150.0,
                         color: Colors.lightBlue,
                         splashColor: Colors.lightBlueAccent,
-                        textColor: Colors.white,
+                        textColor: Colors.white54,
                         child: new Icon(FontAwesomeIcons.signInAlt),
                         onPressed: () {},
                       )
